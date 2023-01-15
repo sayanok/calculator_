@@ -69,7 +69,7 @@ const App: React.FC = () => {
 
   function clear() {
     if (currentNumber !== 0) {
-      setCurrentNumber(0);
+      setCurrentNumber(null);
       setNumberToDisplay(prevNumber ? prevNumber : 0);
       setPrevNumberToDisplay(prevNumber ? prevNumber : 0);
     } else if (inputOperator !== "") {
@@ -78,7 +78,7 @@ const App: React.FC = () => {
       setInputItem("prevNumber");
       setPrevNumber(prevNumberToDisplay!);
     } else {
-      setPrevNumber(0);
+      setPrevNumber(null);
       setPrevNumberToDisplay(currentNumber);
       setNumberToDisplay(0);
       setInputItem("prevNumber");
@@ -86,9 +86,9 @@ const App: React.FC = () => {
   }
 
   function allClear() {
-    setCurrentNumber(0);
+    setCurrentNumber(null);
     setInputOperator("");
-    setPrevNumber(0);
+    setPrevNumber(null);
     setNumberToDisplay(0);
     setPrevNumberToDisplay(0);
     setInputItem("prevNumber");
